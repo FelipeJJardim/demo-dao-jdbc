@@ -5,98 +5,97 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Seller implements Serializable {
-		
+
 	private static final long serialVersionUID = 1L;
-	
-		private Integer id;
-		private String name;
-		private String email;
-		private Date birthdate;
-		private Double baseSalary;
-		
-		private Department department;
-		
-		public Seller() {
-		}	
 
-		public Seller(Integer id, String name, String email, Date birthdate, Double baseSalary, Department department) {
-			this.id = id;
-			this.name = name;
-			this.email = email;
-			this.birthdate = birthdate;
-			this.baseSalary = baseSalary;
-			this.department = department;
-		}
+	private Integer id;
+	private String name;
+	private String email;
+	private Date birthdate;
+	private Double baseSalary;
+	Department department;
 
-		public Integer getId() {
-			return id;
-		}
+	public Seller() {
+	}
 
-		public void setId(Integer id) {
-			this.id = id;
-		}
+	public Seller(Integer id, String name, String email, Date birthdate, Double baseSalary, Department department) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.birthdate = birthdate;
+		this.baseSalary = baseSalary;
+		this.department = department;
+	}
 
-		public String getName() {
-			return name;
-		}
+	public Integer getId() {
+		return id;
+	}
 
-		public void setName(String name) {
-			this.name = name;
-		}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-		public String getEmail() {
-			return email;
-		}
+	public String getName() {
+		return name;
+	}
 
-		public void setEmail(String email) {
-			this.email = email;
-		}
+	public void setName(String name) {
+		this.name = name;
+	}
 
-		public Date getBirthdate() {
-			return birthdate;
-		}
+	public String getEmail() {
+		return email;
+	}
 
-		public void setBirthdate(Date birthdate) {
-			this.birthdate = birthdate;
-		}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-		public Double getBaseSalary() {
-			return baseSalary;
-		}
+	public Date getBirthdate() {
+		return birthdate;
+	}
 
-		public void setBaseSalary(Double baseSalary) {
-			this.baseSalary = baseSalary;
-		}
+	public void setBirthdate(Date birthdate) {
+		this.birthdate = birthdate;
+	}
 
-		public Department getDepartment() {
-			return department;
-		}
+	public Double getBaseSalary() {
+		return baseSalary;
+	}
 
-		public void setDepartment(Department department) {
-			this.department = department;
-		}
+	public void setBaseSalary(Double baseSalary) {
+		this.baseSalary = baseSalary;
+	}
 
-		@Override
-		public int hashCode() {
-			return Objects.hash(id);
-		}
+	public Department getDepartment() {
+		return department;
+	}
 
-		@Override
-		public boolean equals(Object obj) {
-			if (this == obj)
-				return true;
-			if (obj == null)
-				return false;
-			if (getClass() != obj.getClass())
-				return false;
-			Seller other = (Seller) obj;
-			return Objects.equals(id, other.id);
-		}
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
 
-		@Override
-		public String toString() {
-			return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", birthdate=" + birthdate
-					+ ", baseSalary=" + baseSalary + ", department=" + department + "]";
-		}
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Seller other = (Seller) obj;
+		return Objects.equals(id, other.id);
+	}
+
+	@Override
+	public String toString() {
+		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", birthdate=" + birthdate + ", baseSalary="
+				+ baseSalary + ", department=" + department + "]";
+	}
 
 }
